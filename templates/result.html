@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metinde geçen kelimeler</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+
+    <div class="container">
+        <h1>Metinde geçen kelimeler</h1>
+
+       <div class="header-buttons">
+                <form method="POST" action="{{ url_for('download_word') }}" style="display: inline;">
+                    <input type="hidden" name="kelimeler" value='{{ kelimeler|tojson }}'>
+                    <button type="submit" class="download-btn">Quizlet Formatında İndir</button>
+                </form>
+            </div>
+
+        <p>En-Tr en yaygın kullanılan karşılığı gösterir</p>
+            <p><strong>Bulunan kelime sayısı:</strong> {{ kelimeler|length }}</p>
+
+            <div class="kelime-listesi">
+                {% for eng, tr in kelimeler.items() %}
+                    <div class="kelime-item">
+                        <span class="eng">{{ eng }}</span> →
+                        <span class="tr">{{ tr }}</span>
+                    </div>
+                {% endfor %}
+       <div class="footer-buttons">
+                <form method="POST" action="{{ url_for('download_word') }}" style="display: inline;">
+                    <input type="hidden" name="kelimeler" value='{{ kelimeler|tojson }}'>
+                    <button type="submit" class="download-btn">Quizlet Formatında İndir</button>
+                </form>
+            </div>
+
+            </div>
+
+        <a href="/" class="button1">Geri Dön</a>
+    </div>
+</body>
+</html>

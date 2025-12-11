@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>FlaskApp</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
+</style>
+</head>
+<body>
+
+
+<form class="container" action="{{ url_for('result') }}" method="POST">
+
+    <div class="container-0">
+
+        <div class="header-info">
+            <h1>Web Sayfası ve Metin Çevirici</h1>
+            <p>İnternet sayfalarından veya metinlerden <br> İngilizce-Türkçe en yaygın kullanılan karşılığı gösterir.<br>
+            Tek tek kelime bakmak yerine aradığınız kelimelerin hepsini alfabetik sıralı listede görebilirsiniz.<br>
+            <b>Kelimeleri Quizlet'e uygun formatta indirebilirsiniz</b></p>
+        </div>
+
+    <div class="container-1">
+
+  <label for="url">Sayfa URL'sini (link) girin</label>
+  <input
+    type="url"
+    name="girilen"
+    id="url"
+    placeholder="https://example.com"
+    >
+<!--gerekirse kullan    pattern="https://.*"-->
+  </div>
+
+
+<div class="container-2">
+   <label for="url">Metni Kopyalayın</label>
+  <input
+    style="height:200px;font-size:14pt;"
+    type="text"
+    name="metin"
+    id="text"
+    placeholder="Metni yapıştırın">
+</div>
+
+  <button type="submit">Gönder</button>
+
+    </div>
+
+</form>
+
+</body>
+</html>
+
+
+
+
+
