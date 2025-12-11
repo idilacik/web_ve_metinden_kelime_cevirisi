@@ -3,7 +3,34 @@ from ceviriApp import translate_from_url, translate_from_text
 from docx import Document
 from io import BytesIO
 import json
-import datetime
+from datetime import datetime
+import nltk
+import ssl
+
+
+try:
+    _create_unverified_https_context = ssl._create_unverified_context
+except AttributeError:
+    pass
+else:
+    ssl._create_default_https_context = _create_unverified_https_context
+
+# NLTK verilerini kontrol et ve indir
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
+
+try:
+    nltk.data.find('taggers/averaged_perceptron_tagger')
+except LookupError:
+    nltk.download('averaged_perceptron_tagger')
+
+try:
+    nltk.data.find('corpora/wordnet')
+except LookupError:
+    nltk.download('wordnet')
+
 
 app = Flask(__name__)
 
@@ -64,4 +91,4 @@ def download_word():
     )
 
 if __name__ == "__main__":
-    app.run(port=5000)
+    app.run(debug=True, port=5000)
