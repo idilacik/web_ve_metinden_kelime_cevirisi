@@ -1,10 +1,9 @@
 # Web ve metinden kelime çevirisi
-Web sayfasından ya da bir metinden okuma yaparken bulmak istediğiniz ingilizce kelimelerin anlamına 
-teker teker bakmak zorunda kalmak ya da Quizlet üzerinden bu metinlerde geçen kelimelerle çalışma setini
-kolayca oluşturabilmek için yaptığım web uygulamamı kullanabilirsiniz.Bu proje bir web sayfasından kelimelere
-direkt ulaşarak ya da sayfadan kopyalayarak yapıştırabileceğiniz bir metinden kelimeleri alarak sık kullanılan Türkçe 
-karşılıklarını lıstelıyor. İsterseniz butona tıklayarak Quizlet formatında indirebilir ve çalışma seti oluşturmak
-için kullanabilirsiniz.
+Web sayfası okurken ya da bir metni incelerken İngilizce kelimelerin anlamına tek tek bakmak zorunda kalmayın. Bunun için geliştirdiğim web uygulamasını kullanabilirsiniz.
+
+Uygulama, web sayfasındaki kelimelere doğrudan erişmenizi sağlar. İsterseniz metni kopyalayıp yapıştırarak da kelimeleri alabilirsiniz.Sık kullanılan Türkçe karşılıklarını sizin için listeler.
+Ayrıca tek bir butona tıklayarak bu kelimeleri Quizlet formatında indirebilirsiniz.
+Böylece kolayca bir çalışma seti oluşturabilirsiniz.
 
 Flask ile geliştirdiğim uygulamayı  Render cloud platformunda deploy ettim. Aşağıdaki adrese tıklayarak ücretsiz 
 olarak kullanabilirsiniz. İlk kullanımda sayfanın yüklenmesi 50 saniye kadar sürebilir. Bunun sebebi kullandığım
